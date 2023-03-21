@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./resources/styles/index_style.css" />
+  <title>Home | Jenshin IMpekZ</title>
+  <link rel="icon" href="./resources/images/logo_white.png" type="image/x-icon"/>
+</head>
+<body>
+<!-- ------------------- HEADER ------------------- -->
+  <div class="container">  
+    <navbar>
+        <div class="navi">
+          <input type="checkbox" id="navi-check">
+          <div class="navi-header">
+            <img src="./resources/images/logo_white.png" class="icon" />
+          </div>
+          <div class="navi-btn">
+            <label for="navi-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+          <div class="navi-links">
+            <a href="./index.html" class="menu-style page">HOME</a>
+            <a href="./char.html" class="menu-style">CHARACTER</a>
+            <a href="./maps.html" class="menu-style">MAPS</a>
+            <a href="./about.html" class="menu-style">ABOUT GAME</a>
+            <a href="./register.html" class="menu-style">REGISTER</a>
+          </div>
+        </div>
+      </navbar> 
+    </div> 
+<!-- ------------------- CONTENT ------------------- -->
+    <div class="jumbotron">
+        <div>
+          <p>Step Into a Vast Magical<br>World of Adventure~  </p>
+          <button>Download</button>
+        </div>
+    </div>
+    <div class="page2">
+      <div class="captionchar">
+        <p>New Characters</p>
+      </div>
+      <div class="container-2">
+        <div class="slider1">
+          <input type="radio" class="radio" name="images" id="radio-1" checked>
+          <input type="radio" class="radio" name="images" id="radio-2">
+          <input type="radio" class="radio" name="images" id="radio-3">
+          <input type="radio" class="radio" name="images" id="radio-4">
+          <div class="slide" id="slide-1">
+            <img src="./resources/images/newchar_jean01.png" alt="">
+            <div class="caption">
+              <p>Jean</p>
+            </div>
+          </div>
+          <div class="slide" id="slide-2">
+            <img src="./resources/images/newchar_alhaitham02.png" alt="">
+            <div class="caption">
+              <p>Altha<br>itham</p>
+            </div>
+          </div>
+          <div class="slide" id="slide-3">
+            <img src="./resources/images/newchar_barbara3.png" alt="">
+            <div class="caption">
+              <p>Bar<br>ba<br>ra</p>
+            </div>
+          </div>
+          <div class="slide" id="slide-4">
+            <img src="./resources/images/newchar_ningguang04.png" alt="">
+            <div class="caption">
+              <p>Ning<br>guang</p>
+            </div>
+          </div>
+          <div class="dots">
+            <label for="radio-1" id="label-1"></label>
+            <label for="radio-2" id="label-2"></label>
+            <label for="radio-3" id="label-3"></label>
+            <label for="radio-4" id="label-4"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page3">
+      <div class="captionweapon">
+        <p>New Weapons</p>
+      </div>
+      <div class="slider2">
+        <div id="item-1"></div>
+        <div id="item-2"></div>
+        <div id="item-3"></div>
+        <div class="slider-item item-1">
+          <a href="#item-3" class="arrow-prev arrow"></a>
+          <a href="#item-2" class="arrow-next arrow"></a>
+        </div>
+        <div class="slider-item item-2">
+          <a href="#item-1" class="arrow-prev arrow"></a>
+          <a href="#item-3" class="arrow-next arrow"></a>
+        </div>
+        <div class="slider-item item-3">
+          <a href="#item-2" class="arrow-prev arrow"></a>
+          <a href="#item-1" class="arrow-next arrow"></a>
+        </div>
+      </div>
+    </div>
+<!-- ------------------- FOOTER ------------------- -->
+  <footer class="footerbro">
+    <div class="containerfooter">
+      <div class="footerlogo">
+        <img src="./resources/images/logo_white.png" alt="" class="iconfooter">
+      </div>
+      <div class="copyright">
+        <p>© 2023 Hooray Team.<br>All Rights Reserved.</p>
+      </div>
+      <div class="socialmedia">
+        <a href="https://instagram.com/pptibca.14?igshid=YmMyMTA2M2Y="><img src="./resources/images/ig.png" alt="IG"></a>
+        <a href="https://www.linkedin.com/in/kerenhosanna/"><img src="./resources/images/linkedin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

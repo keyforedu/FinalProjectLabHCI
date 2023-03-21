@@ -1,0 +1,901 @@
+:root {
+  --main-color: white;
+  --main-sec-color: grey;
+  --sec-color: black;
+  --tr: transparent;
+  --pad: 6rem;
+} 
+
+@font-face {
+  font-family: HYWenHei;
+  src: url(../zh-cn.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------- NAVIGATION BAR ------------------- */
+
+.navi {
+  height: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navi > .navi-header {
+  display: inline;
+}
+
+.navi > .navi-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navi > .navi-links > a {
+  font-family: 'Inter';
+  display: inline;
+  padding: 40px 40px;
+  text-decoration: none;
+}
+
+.navi > .navi-links > a:hover {
+  color: var(--main-color);
+  font-weight: 600;
+  transition: all 200ms;
+}
+
+.nav, #navi-check {
+  display: none;  
+}
+
+navbar {
+  top: 0;
+  position: fixed;
+  height: fit-content;
+  width: 100%;
+  padding: 7px 5vw;
+  background-color: black;
+  z-index: 100;
+  opacity: 70%;
+}
+
+.menu-style {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--main-sec-color);
+}
+
+.menu-style.page {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.icon {
+  height: 45px;
+}
+
+.container {
+  margin: 0;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+/* ------------------- FOOTER ------------------- */
+
+.footerbro {
+  bottom: 0;
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  padding: 7px 5vw;
+  background-color: var(--sec-color);
+  z-index: 100;
+  justify-content: space-between;
+}
+
+.containerfooter{
+  margin: 0;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.containerfooter > .footerlogo {
+  display: inline;
+}
+
+.copyright{
+  padding-left: 30%;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 100%;
+  color: var(--main-color);
+  font-family: Inter;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.iconfooter {
+  height: 45px;
+}
+
+.containerfooter > .socialmedia {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 30%;
+}
+
+.containerfooter > .socialmedia img {
+  height: 30px;
+  width: 30px;
+}
+
+/* ------------------- RESPONSIVE NAVBAR + FOOTER ------------------- */
+
+@media screen and (max-width: 769px) {
+  .navi > .navi-btn {
+      display: flex;
+  }
+
+  .navi > .navi-btn > label {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      padding: 10px;
+  }
+
+  .navi > .navi-btn > label:hover,
+  .navi #navi-check:checked ~ .navi-btn > label {
+      border: 3px solid white;
+  }
+
+  .navi > .navi-btn > label > span {
+      display: block;
+      border-top: 2px solid var(--main-color);
+  }
+
+  .navi > .navi-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: var(--main-color);
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 70px;
+      left: 0px;
+      box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.2);
+  }
+
+  .navi > .navi-links > a {
+      display: block;
+      width: 100%;
+      color: var(--sec-color);
+  }
+
+  .navi > .navi-links > a:hover{
+      color: var(--main-color);
+  }
+
+  .navi > #navi-check:not(:checked) ~ .navi-links {
+      height: 0px;
+  }
+
+  .navi > #navi-check:checked ~ .navi-links {
+      height: fit-content;
+      overflow-y: auto;
+  } 
+
+  .containerfooter > .copyright p{
+      display: inline-flex;
+  }
+
+  .footerlogo img{
+      display: none;
+  } 
+
+  .containerfooter > .socialmedia img{
+      display: none;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .containerfooter > .copyright {
+      font-size: 0.65rem;
+  }
+}
+
+/* ------------------- CONTENT ------------------- */
+
+  .jumbotron1{
+    padding-top: 15vh;
+    width: 100%;
+    height: 130vh;
+    background-image: url(../images/charpage/Mondstadt_BG.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+  }
+
+  .name {
+    font-family: HYWenHei;
+  }
+  
+  .title-1{
+    font-size: 5em;
+    font-family: HYWenHei;
+    color: white;
+    /* border: 0.0001% grey; */
+    text-align: center;
+  }
+
+  .card-wrapper-1{
+    width: 100%;
+    height: 50vh;
+    /* overflow: hidden; */
+  }
+  
+  .slide-content-1{
+    margin: 0 20%;
+    position: relative;
+  }
+
+  .image-content-1{
+    /* background-color: red; */
+    row-gap: 5%;
+  }
+
+  .card-content-1{
+    /* background-color: red; */
+    width: 100%;
+    /* padding: 1 1 2 2; */
+    flex-direction: column;
+    /* align-items: start; */
+    margin-top: 20%;
+  }
+
+  .card-content-1 .name{
+    /* background-color: blue; */
+    width: 100%;
+    margin-top: -10vh;
+    font-size: 3em;
+    font-weight: 300;
+    color: white;
+    margin-left: -5vw;
+  }
+
+  .card-content-1 .description{
+    background-color: #31000085;
+    width: 70%;
+    margin-left: -5vw;
+    margin-right: 1vw;
+    margin-top: 2vh;
+    font-size: 1.25em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    z-index: 2;
+  }
+
+  .card-1-image {
+    /* background-color: yellow; */
+    margin-bottom: 25vh;
+    margin-left: 10vw;
+  }
+
+  .card-1-image img{
+    /* background-color: yellowgreen; */
+    position: absolute;
+    width: 115%;
+    top: -80%;
+    /* left: 0;s */
+    z-index: -1;
+  }
+
+  #mini-1{
+    /* background-color: aqua; */
+    align-items: baseline;
+    margin-top: 2vh;
+    display: flex;
+    gap: 4vw;
+    justify-content: center;
+  }
+  #mini-2{
+    align-items: baseline;
+    margin-top: 1vh;
+    display: flex;
+    gap: 4vw;
+    justify-content: center;
+  }
+  #mini-3{
+    align-items: baseline;
+    margin-top: 1vh;
+    display: flex;
+    gap: 4vw;
+    justify-content: center;
+  }
+  #mini-4{
+    align-items: baseline;
+    margin-top: 6vh;
+    display: flex;
+    gap: 4vw;
+    justify-content: center;
+  }
+
+  .swiper-button-prev img{
+    /* background-color: yellow; */
+    width: 3em;
+    align-items: baseline;
+    display: flex;
+  }
+
+  .swiper-button-next img{
+    /* background-color: yellow; */
+    width: 3em;
+    align-items: baseline;
+    display: flex;
+  }
+
+  .mini-bg{
+    height: 27vh;
+    background-color: rgba(0, 0, 0, 0.607);
+    border: 3px solid black;
+    border-radius: 10%;
+    z-index: 2;
+  }
+  
+  .mini-bg.card-active {
+    border: 5px solid rgba(255, 255, 255, 0.607);
+    background-color: rgba(255, 255, 255, 0.607);
+  }
+
+  .mini-bg .mini-name{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mini-bg .mini-name.card-active{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+  }
+
+  #ningguang{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #xiangling{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .jumbotron2{
+    padding-top: 10vh;
+    width: 100%;
+    height: 130vh;
+    background-image: url(../images/charpage/Liyue-BG.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .title-2{
+    font-size: 5em;
+    font-family: HYWenHei;
+    color: white;
+    /* border: 0.0001% grey; */
+    text-align: center;
+  }
+
+  .card-wrapper-2{
+    width: 100%;
+    height: 50vh;
+  }
+  
+  .slide-content-2{
+    margin: 0 20%;
+    position: relative;
+  }
+
+  .image-content-2{
+    row-gap: 5%;
+  }
+
+  .card-content-2{
+    /* padding: 1 1 2 2; */
+    width: 100%;
+    flex-direction: column;
+    /* align-items: start; */
+    /* left: 0; */
+    margin-top: 25%;
+    /* margin-left: 1%; */
+  }
+
+  .card-content-2 .name{
+    width: 100%;
+    margin-top: -10vh;
+    font-size: 3em;
+    font-weight: 300;
+    color: white;
+    margin-left: -5vw;
+  }
+
+  .card-content-2 .description{
+    background-color: #31000085;
+    width: 70%;
+    margin-left: -5vw;
+    margin-right: 1vw;
+    margin-top: 2vh;
+    font-size: 1.25em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    z-index: 2;
+  }
+ 
+
+  .card-2-image {
+    margin-bottom: 25vh;
+    margin-left: 10vw;
+  }
+
+  .card-2-image img{
+    position: absolute;
+    width: 115%;
+    top: -80%;
+    /* left: 30%; */
+    z-index: -1;
+  }
+
+  
+
+  .jumbotron3{
+    padding-top: 10vh;
+    width: 100%;
+    height: 130vh;
+    background-image: url(../images/charpage/Inazuma-BG.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+  }
+
+  .title-3{
+    font-size: 5em;
+    font-family: HYWenHei;
+    color: white;
+    /* border: 0.0001% grey; */
+    text-align: center;
+  }
+
+  .card-wrapper-3{
+    width: 100%;
+    height: 50vh;
+  }
+  
+  .slide-content-3{
+    margin: 0 20%;
+    position: relative;
+  }
+
+  .image-content-3{
+    row-gap: 5%;
+  }
+
+  .card-content-3{
+    /* padding: 1 1 2 2; */
+    width: 100%;
+    flex-direction: column;
+    /* align-items: start; */
+    margin-top: 25%;
+    /* margin-left: 1%; */
+  }
+
+  .card-content-3 .name{
+    width: 100%;
+    margin-top: -10vh;
+    font-size: 3em;
+    font-weight: 300;
+    color: white;
+    margin-left: -5vw;
+  }
+
+  .card-content-3 .description{
+    background-color: #31000085;
+    width: 70%;
+    margin-left: -5vw;
+    margin-right: 1vw;
+    margin-top: 2vh;
+    font-size: 1.25em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    z-index: 2;
+  }
+ 
+
+  .card-3-image {
+    margin-bottom: 25vh;
+    margin-left: 10vw;
+  }
+
+  .card-3-image img{
+    position: absolute; 
+    width: 115%;
+    top: -80%;
+    /* left: 30%; */
+    z-index: -1;
+  }
+
+  #kamisatoayaka{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    margin-top: 3%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  #kaedeharakazuha{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    margin-top: 3%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  #raidenshogun{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    margin-top: 3%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .jumbotron4{
+    padding-top: 10vh;
+    width: 100%;
+    height: 130vh;
+    background-image: url(../images/charpage/Sumeru-BG.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+  }
+
+
+  .title-4{
+    font-size: 5em;
+    font-family: HYWenHei;
+    color: white;
+    /* border: 0.0001% grey; */
+    text-align: center;
+  }
+  
+  .card-wrapper-4{
+    width: 100%;
+    height: 50vh;
+  }
+
+  .slide-content-4{
+    margin: 0 20%;
+    position: relative;
+  }
+
+  .image-content-4{
+    row-gap: 5%;
+  }
+
+  .card-content-4{
+    /* padding: 1 1 2 2; */
+    width: 100%;
+    flex-direction: column;
+    /* align-items: start; */
+    margin-top: 20%;;
+    /* margin-left: 1%; */
+  }
+
+  .card-content-4 .name{
+    width: 100%;
+    margin-top: -10vh;
+    font-size: 3em;
+    font-weight: 300;
+    color: white;
+    margin-left: -5vw;
+  }
+
+  .card-content-4 .description{
+    background-color: #31000085;
+    width: 70%;
+    margin-left: -5vw;
+    margin-right: 1vw;
+    margin-top: 2vh;
+    font-size: 1.25em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    z-index: 2;
+  }
+ 
+
+  .card-4-image {
+    margin-bottom: 25vh;
+    margin-left: 10vw;
+  }
+
+  .card-4-image img{
+    position: absolute;
+    width: 115%;
+    top: -70%;
+    /* left: 30%; */
+    z-index: -1;
+  }
+
+  .responsive-char{
+    display: none;
+  }
+  .swiper-responsive-next{
+    display: none;
+  }
+  .swiper-responsive-prev{
+    display: none;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .jumbotron1{
+      width: 100%;
+      height: 100%;
+      /* background-size: 100% 100%; */
+    }
+    .jumbotron2{
+      width: 100%;
+      height: 100%;
+      /* background-size: 100% 100%; */
+    }
+    .jumbotron3{
+      width: 100%;
+      height: 100%;
+      /* background-size: 100% 100%; */
+    }
+    .jumbotron4{
+      width: 100%;
+      height: 100%;
+      /* background-size: 100% 100%; */
+    }
+
+
+    .title-1{
+      font-size: 3em;
+    }
+    .title-2{
+      font-size: 3em;
+    }
+    .title-3{
+      font-size: 3em;
+    }
+    .title-4{
+      font-size: 3em;
+    }
+
+
+    .card-content-1 .name{
+      margin-top: -20vh;
+      font-size: 2em;
+    }
+    .card-content-2 .name{
+      margin-top: -20vh;
+      font-size: 2em;
+    }
+    .card-content-3 .name{
+      margin-top: -20vh;
+      font-size: 2em;
+    }
+    .card-content-4 .name{
+      margin-top: -20vh;
+      font-size: 2em;
+    }
+
+    
+    .card-content-1 .description{
+      font-size: 0.7em;
+    }
+    .card-content-2 .description{
+      font-size: 0.7em;
+    }
+    .card-content-3 .description{
+      font-size: 0.7em;
+    }
+    .card-content-4 .description{
+      font-size: 0.7em;
+    }
+
+
+    .card-1-image img{
+      top: 0;
+      width: 90vw;
+      left: -12vw;
+    }
+    .card-2-image img{
+      top: 0;
+      width: 90vw;
+      left: -12vw;
+    }
+    .card-3-image img{
+      top: 0;
+      width: 90vw;
+      left: -12vw;
+    }
+    .card-4-image img{
+      top: 0;
+      width: 90vw;
+      left: -12vw;
+    }
+
+
+    .mini{
+      display: none;
+    }
+
+    .mini #mini-1{
+      display: flex;
+      justify-content: center;
+      margin-top: 10vh;
+    }
+    .mini #mini-2{
+      margin-top: 10vh;
+    }
+    .mini #mini-3{
+      margin-top: 5vh;
+      height: 2vh;
+    }
+    .mini #mini-4{
+      margin-top: 10vh;
+    }
+    
+
+    .mini-bg{
+      display: none;
+    }
+    .mini-bg img{
+      display: none;
+    }
+
+    .mini-bg .mini-name{
+      display: none;
+    }
+
+
+    .swiper-button-prev img{
+      width: 2em;
+      align-items: baseline;
+      display: none;
+    }
+  
+    .swiper-button-next img{
+      width: 2em;
+      align-items: baseline;
+      display: none;
+    }
+
+    .mini-responsive-1{
+      /* background-color: yellow; */
+      width: 100%;
+      align-items:center;
+      display: flex;
+      justify-content: center;
+      top: -70%;
+    }
+    .mini-responsive-2{
+      width: 100%;
+      align-items:center;
+      display: flex;
+      justify-content: center;
+      top: -70%;
+    }
+    .mini-responsive-3{
+      width: 100%;
+      align-items:center;
+      display: flex;
+      justify-content: center;
+      top: -70%;
+    }
+    .mini-responsive-4{
+      width: 100%;
+      align-items:center;
+      display: flex;
+      justify-content: center;
+      top: -70%;
+    }
+
+    .responsive-char{
+      display: contents;
+    }
+
+    .responsive-char img{
+      display: flex;
+      justify-content: center;
+      height: 17vh;
+    }
+
+    .responsive-char .responsive-name{
+      display: flex;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+      color: white; 
+      font-size: 0.9em;
+      margin-top: 5%;
+      justify-content: center;
+    }
+
+    .swiper-responsive-prev{
+      scale: 0.25;
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-responsive-next{
+      scale: 0.25;
+      display: flex;
+      align-items: center;
+    }
+
+    .tampung-responsive{
+      height: 25vh;
+      background-color: rgba(0, 0, 0, 0.607);
+      border: 3px solid black;
+      border-radius: 10%;
+      z-index: 2;
+    }
+
+
+    .copyright {
+      padding-left: 30%;
+      font-size: 10px;
+      text-align: center;
+      line-height: 100%;
+      color: var(--main-color);
+      font-family: HYWenHei;
+    }
+
+    .containerfooter > .socialmedia img {
+      height: 20px;
+      width: 20px;
+    }
+    
+  }
+
+  
+  
